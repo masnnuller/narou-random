@@ -1,0 +1,19 @@
+<html lang="ja">
+<head>
+  <title>narou-generator</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="/stylesheets/application.css" type="text/css"/>
+</head>
+<body>
+  <div id="main">
+    <div id="narou-title">
+      <a href=<%="http://ncode.syosetu.com/#{@data[1]["ncode"].downcase}/"%>>
+        <%=@data[1]["title"]%>
+      </a>
+    </div>
+    <div id="author">
+      <%=@data[1]["writer"]%>
+    </div>
+  </div>
+</body>
+</html>
