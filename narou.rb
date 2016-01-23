@@ -11,7 +11,6 @@ get '/' do
   ncodes = (1..100).map{gen_ncode}.join("-")
   res = Net::HTTP.get(URI.parse(baseurl + "&ncode=#{ncodes}"))
   @data = JSON.parse(res)
-  print @data
   if @data[0]["allcount"].to_i == 0
     redirect "/" 
   end
