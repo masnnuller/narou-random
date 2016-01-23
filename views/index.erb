@@ -7,13 +7,21 @@
 <body>
   <div id="main">
     <div id="narou-title">
-      <a href=<%="http://ncode.syosetu.com/#{@data[1]["ncode"].downcase}/"%>>
-        <%=@data[1]["title"]%>
+      <a href=<%="http://ncode.syosetu.com/#{@data["ncode"].downcase}/"%>>
+        <%=@data["title"]%>
       </a>
     </div>
     <div id="author">
-      <%=@data[1]["writer"]%>
+      <%=@data["writer"]%>
     </div>
+    <br>
+    <form action="/" method="get">
+      <input type="checkbox" name="stop" value=true <%="checked" if @checked[:stop]%>>
+      完結作品のみ表示する
+      <input type="checkbox" name="r18" value=true <%="checked" if @checked[:r18]%>>
+      R-18作品を含めて表示する
+      <br><button type="submit"> 更新 
+    </form>
   </div>
 </body>
 </html>
